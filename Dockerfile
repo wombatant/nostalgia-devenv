@@ -32,9 +32,3 @@ RUN git clone https://github.com/wombatant/ox.git /usr/local/src/ox && \
           -DCMAKE_INSTALL_PREFIX=/usr/x86_64-w64-mingw32 \
           -DOX_BUILD_EXEC=OFF ../../ && \
     make -j install
-
-###############################################################################
-# Setup working directory
-
-RUN mkdir /usr/src/project
-WORKDIR /usr/src/project
