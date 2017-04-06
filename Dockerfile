@@ -8,7 +8,7 @@ ENV DEVKITARM ${DEVKITPRO}/devkitARM
 
 RUN git clone https://github.com/wombatant/ox.git /usr/local/src/ox && \
     cd /usr/local/src/ox && \
-    git checkout -b install 4aa233d66405791aef44d47c6fc97b561a472528; \
+    git checkout -b install 3d868d2dfa97cab95769e6309f6fcdcfa5f20b93; \
 	 # setup build dirs
     mkdir -p \
              /usr/local/src/ox/build/release \
@@ -28,7 +28,7 @@ RUN git clone https://github.com/wombatant/ox.git /usr/local/src/ox && \
     # install Ox for Windows
     cd /usr/local/src/ox/build/windows && \
     cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-          -DCMAKE_TOOLCHAIN_FILE=cmake/Modules/GBA.cmake \
+          -DCMAKE_TOOLCHAIN_FILE=cmake/Modules/Mingw.cmake \
           -DCMAKE_INSTALL_PREFIX=/usr/x86_64-w64-mingw32 \
           -DOX_BUILD_EXEC=OFF ../../ && \
     make -j install
