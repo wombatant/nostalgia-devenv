@@ -8,7 +8,7 @@ ENV DEVKITARM ${DEVKITPRO}/devkitARM
 
 RUN git clone https://github.com/wombatant/ox.git /usr/local/src/ox && \
     cd /usr/local/src/ox && \
-    git checkout -b install aaac08d3b20e7df96a96758d8b3c01d9742aa00c; \
+    git checkout -b install eab7e0ff3ac87eb16d78cac5dee00ae79ac665c9; \
 	 # setup build dirs
     mkdir -p \
              /usr/local/src/ox/build/release \
