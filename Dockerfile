@@ -23,7 +23,7 @@ RUN git clone https://github.com/wombatant/ox.git /usr/local/src/ox && \
     cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
           -DCMAKE_TOOLCHAIN_FILE=cmake/Modules/GBA.cmake \
           -DCMAKE_INSTALL_PREFIX=/opt/devkitPro/devkitARM \
-          -DOX_BUILD_EXEC=OFF ../../ && \
+          -DOX_USE_STDLIB=OFF ../../ && \
     make -j install; \
     # install Ox for Windows
     cd /usr/local/src/ox/build/windows && \
